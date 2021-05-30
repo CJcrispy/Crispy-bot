@@ -1,1 +1,1 @@
-worker: python3 joe_bot.py
+worker: python3 crispy-bot.py
