@@ -1,7 +1,6 @@
 import os
 import subprocess
 import webbrowser
-from selenium import webdriver
 from to_do_list import *
 from time import sleep
 from dotenv import load_dotenv
