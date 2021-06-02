@@ -14,7 +14,9 @@ bot = commands.Bot(command_prefix='!')
 async def commandsList(ctx):
     await ctx.send("""
     test
-    A List of commands
+    - practice
+    - study
+    - idea
     """)
 
 @bot.commman()
