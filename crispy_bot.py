@@ -17,6 +17,13 @@ async def commandsList(ctx):
     A List of commands
     """)
 
+@bot.commman()
+async def practice(ctx):
+    await ctx.send("""
+    Interview practice questins
+        1. https://www.educative.io/blog/google-coding-interview-questions
+    """)
+
 # Quality of Life commands
 @bot.command()
 async def study(ctx, topic: str):
