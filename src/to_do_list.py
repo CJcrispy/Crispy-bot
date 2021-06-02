@@ -51,7 +51,3 @@ def updateList(name: str, Description: str = None):
         jsonFile.seek(0)  # rewind
         json.dump(data, jsonFile)
         jsonFile.truncate()
-
-addToStudyList("hi")
-# addToProjectList("hi")
-# updateList("hi")
