@@ -19,7 +19,7 @@ async def commandsList(ctx):
     - idea
     """)
 
-@bot.commman()
+@bot.command()
 async def practice(ctx):
     await ctx.send("""
     Interview practice questins
