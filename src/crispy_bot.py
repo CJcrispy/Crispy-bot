@@ -1,7 +1,7 @@
 import os
 import subprocess
 import webbrowser
-from to_do_list import *
+import to_do_list as td
 from time import sleep
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -20,12 +20,12 @@ async def commandsList(ctx):
 # Quality of Life commands
 @bot.command()
 async def study(ctx, topic: str):
-    addToStudyList(topic)
+    td.addToStudyList(topic)
     await ctx.send("New study topic '%s' added!" % topic)
 
 @bot.command()
 async def idea(ctx, idea: str, description: str = None):
-    addToProjectList(idea, description)
+    td.addToProjectList(idea, description)
     await ctx.send("New project idea '%s' added!" % idea)
 
 # Concourse CI commands

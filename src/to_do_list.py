@@ -1,12 +1,12 @@
 import json
 from datetime import datetime
 
-def write_json(data, filename='src\json\project_ideas.json'):
+def write_json(data, filename='project_ideas.json'):
     with open(filename,'w') as f:
         json.dump(data, f, indent=4)
 
 def addToProjectList(name, description: str = None):
-    with open('src\json\project_ideas.json') as jsonFile:
+    with open('project_ideas.json') as jsonFile:
         data = json.load(jsonFile)
         temp = data["project_ideas"]
         x = len(temp)
@@ -24,9 +24,9 @@ def addToProjectList(name, description: str = None):
     write_json(data)
 
 def addToStudyList(name):
-    with open('src\json\study_list.json') as jsonFile:
+    with open('study_list.json') as jsonFile:
         data = json.load(jsonFile)
-        temp = data["study_list"]
+        temp = data["study_ideas"]
         x = len(temp)
 
         # append to json array
@@ -39,7 +39,7 @@ def addToStudyList(name):
     write_json(data)
 
 def updateList(name: str, Description: str = None):
-    with open('src\json\project_ideas.json', 'r+') as jsonFile:
+    with open('project_ideas.json', 'r+') as jsonFile:
         data = json.load(jsonFile)
         temp = data["project_ideas"]
 
@@ -52,5 +52,6 @@ def updateList(name: str, Description: str = None):
         json.dump(data, jsonFile)
         jsonFile.truncate()
 
-#addToList("hi")
-updateList("hi")
+addToStudyList("hi")
+# addToProjectList("hi")
+# updateList("hi")
