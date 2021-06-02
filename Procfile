@@ -1,1 +1,1 @@
-worker: python3 src/crispy_bot.py
+worker: python3 crispy_bot.py
